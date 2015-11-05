@@ -1,0 +1,60 @@
+@import 'import';
+
+body {
+	margin:0;
+	padding:0;
+	background-color:#222;
+}
+* {
+	font-family:Helvetica,sans-serif;
+	color:#888;
+	box-sizing:border-box;
+}
+
+.title {
+	text-align:center;
+	color:#fff;
+}
+
+$colr:#555;
+
+#textarea {
+	min-width:200px;
+	max-width:1000px;
+	margin:30px auto;
+	@include box-shadow(0 0 10px 5px rgba(0,0,0,0.3));
+	background-color:$colr;
+	padding:5px 20px 20px;
+
+	.controls { 
+		width:100%;
+		padding:15px 0 10px;
+		display:flex;
+		flex-direction:row;
+
+		button {
+			flex-grow:1;
+			outline:none;
+			border:none;
+			background-color:$blue;
+			color:#fff;
+			padding:10px 10px;
+			margin:0 1px;
+			cursor:pointer;
+			@include transition(all 0.3s ease-in-out);
+			@include box-shadow(0 0 1px 1px rgba(0,0,0,0.3));
+
+			&:hover {
+				@include box-shadow(0 0 10px 1px rgba(0,0,0,0.7));
+			}
+		}
+	}
+
+	.rich_text{
+		background-color:#fff;
+		border:none;
+		width:100%;
+		min-height:200px;
+		padding:20px;
+	}
+}
