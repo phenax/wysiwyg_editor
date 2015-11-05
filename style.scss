@@ -1,4 +1,7 @@
-@import 'import';
+$buttons:#F44336;
+$gray:#555;
+@import url(http://fonts.googleapis.com/css?family=Lato);
+$font:"Lato",Helvetica,sans-serif;
 
 body {
 	margin:0;
@@ -6,7 +9,7 @@ body {
 	background-color:#222;
 }
 * {
-	font-family:Helvetica,sans-serif;
+	font-family:$font;
 	color:#888;
 	box-sizing:border-box;
 }
@@ -16,14 +19,12 @@ body {
 	color:#fff;
 }
 
-$colr:#555;
-
 #textarea {
 	min-width:200px;
 	max-width:1000px;
 	margin:30px auto;
-	@include box-shadow(0 0 10px 5px rgba(0,0,0,0.3));
-	background-color:$colr;
+	box-shadow:0 0 10px 5px rgba(0,0,0,0.3);
+	background-color:$gray;
 	padding:5px 20px 20px;
 
 	.controls { 
@@ -36,16 +37,16 @@ $colr:#555;
 			flex-grow:1;
 			outline:none;
 			border:none;
-			background-color:$blue;
+			background-color:$buttons;
 			color:#fff;
 			padding:10px 10px;
 			margin:0 1px;
 			cursor:pointer;
-			@include transition(all 0.3s ease-in-out);
-			@include box-shadow(0 0 1px 1px rgba(0,0,0,0.3));
+			transition:all 0.3s ease-in-out;
+			box-shadow:0 0 1px 1px rgba(0,0,0,0.3);
 
 			&:hover {
-				@include box-shadow(0 0 10px 1px rgba(0,0,0,0.7));
+				box-shadow:0 0 10px 1px rgba(0,0,0,0.7);
 			}
 		}
 	}
@@ -56,5 +57,6 @@ $colr:#555;
 		width:100%;
 		min-height:200px;
 		padding:20px;
+    cursor:text;
 	}
 }
